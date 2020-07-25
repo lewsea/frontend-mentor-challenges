@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.article-preview {
+    display: flex;
+    max-width: 750px;
+    border-radius: 5px; 
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-preview h2 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.article-preview p {
+    color: hsl(214, 17%, 51%);
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.article-content {
+    padding: 1rem 3rem 1rem 2.5rem;
+}
+
+.writer {
+    display: flex;
+}
+
+.writer-info h4{
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+    padding: 0 1.3rem; 
+}
+
+.writer-info p {
+    margin: .2rem 0 1rem;
+    padding-left: 1.3rem;
+}
+
+.writer > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.button {
+    margin: .5rem 0 0 auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button img {
+    padding: .8rem;
+}
+
+.button p {
+    color: hsl(214, 17%, 51%);
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-top: 15px;
+}
+
+.popup .popup-icon {
+    height: 45px;
+    padding: .5rem 1.5rem ;
+    visibility: hidden;
+    display: flex;
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px; 
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-7rem) translateX(-6.5rem);
+}
+
+.popup .popup-icon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    animation: showPopup 1s;
+}
+
+@keyframes showPopup {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media (max-width: 750px) {
+    .article-preview {
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 80%;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    .article-preview > img {
+        height: 250px;
+        width: 100%;
+    }
+    /* .writer-info {
+        margin: 0;
+        padding: 0;
+    }
+    #sharePopup {
+        border-radius: 0;
+        z-index: 69;
+        width: 237px;    
+        left: 150px;  
+        bottom: -50px;
+    } */
+}

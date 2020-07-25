@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: space-between;
+    width: 90%;
+    margin: 3rem auto;
+    gap: 3rem;
+}
+
+.project-card {
+    flex-direction: row;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 20px rgba(0, 0, 0, 0.13);
+    text-align: center;
+}
+
+.project-card p {
+    font-size: 1.5rem;
+}
+
+.project-image {
+    border-bottom: 1px solid black;
+}
+
+.project-info {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    padding: .5rem 0 1rem 0;
+}
+
+.project-info a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+footer {
+    text-align: center;
+}

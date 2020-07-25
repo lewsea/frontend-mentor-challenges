@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    height: 100vh;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.component-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-container div {
+    background-color: hsl(228, 56%, 26%);
+}
+
+.component-menu {
+    padding: 3rem 5rem;
+    border-radius: 10px 80px 10px 10px;
+    margin-right: 2rem;
+}
+
+.component-data {
+    color: rgba(245, 245, 245, 0.705);
+    width: 40%;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.component-data p span {
+    color: white;
+}
