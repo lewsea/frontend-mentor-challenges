@@ -1,40 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 14px;
-    height: 100vh;
-    background-color: hsl(229, 57%, 11%);
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  height: 100vh;
+  width: 100%;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
 }
 
 .component-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.component-container div {
-    background-color: hsl(228, 56%, 26%);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .component-menu {
-    padding: 3rem 5rem;
-    border-radius: 10px 80px 10px 10px;
-    margin-right: 2rem;
+  background-color: hsl(228, 56%, 26%);
 }
 
 .component-data {
-    color: rgba(245, 245, 245, 0.705);
-    width: 40%;
-    margin-top: 2rem;
-    padding: 2rem;
-    border-radius: 10px;
+  background-color: hsl(228, 56%, 26%);
+}
+
+.component-menu {
+  padding: 2.5rem 10rem 2.5rem 3rem;
+  border-radius: 10px 80px 10px 10px;
+  margin-right: 2rem;
+}
+
+.component-menu-icons {
+  display: flex;
+  margin-top: 1.3rem;
+}
+
+.component-menu-icons img {
+  margin-right: 1rem;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background-color: hsl(229, 57%, 11%);
+}
+
+.component-data {
+  color: rgba(245, 245, 245, 0.705);
+  width: 40%;
+  margin-top: 2.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.component-data span {
+  font-weight: 700;
+}
+
+.percentage-counter {
+  display: flex;
+  justify-content: space-between;
 }
 
 .component-data p span {
-    color: white;
+  color: white;
+}
+
+.component-data-percentage {
+  display: flex;
+}
+
+.progress-bar {
+  background-color: hsl(229, 57%, 11%);
+  width: 100%;
+  border-radius: 13px;
+  padding: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filled-progress-bar {
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  width: 81.5%;
+  height: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-self: center;
+}
+
+.data-percentage-left {
+  position: absolute;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+  }
+  .component-container {
+    flex-direction: column;
+  }
+  .component-container .component-data,
+  .component-menu {
+    width: 80%;
+    margin: 0.7rem 0;
+  }
 }

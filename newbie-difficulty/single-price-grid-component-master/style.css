@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.price-grid-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width: 700px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card-bottom {
+  display: flex;
+  color: white;
+}
+
+.card__header {
+  padding: 2rem;
+}
+
+.card__header h2 {
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.card__header p:first-of-type {
+  color: var(--bright-yellow);
+  margin: 0.7rem 0;
+}
+
+.card__header p {
+  color: var(--grayish-blue);
+  width: 90%;
+  line-height: 1.5;
+}
+
+.card__price {
+  background-color: var(--cyan);
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+.card__price p {
+  color: rgba(255, 255, 255, 0.705);
+}
+
+.card__price h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.card__price h4 span {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card__price button {
+  background-color: var(--bright-yellow);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.card__info {
+  background-color: hsla(179, 62%, 43%, 0.89);
+  flex: 1;
+  padding: 2rem;
+}
+
+.card__info p {
+  line-height: 1.4;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 750px) {
+  .price-grid-card {
+    width: 80%;
+  }
+  .card-bottom {
+    flex-direction: column;
+  }
+}

@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+<!-- mobile first approach -->
+
 <body>
+  <div class="container">
+    <img src="images/logo.svg" alt="" class="logo">
+    <h1><span> We are launching</span> soon!</h1>
+    <p>Subscribe and get notified</p>
+    <form id="form" class="form" action="#">
+      <input type="email" id="email" placeholder="Your email address..." class="email">
+      <span id="text"></span>
+      <input type="submit" value="Notify Me" class="submit" onclick="validation()"></input>
+    </form>
+    <img src="images/illustration-dashboard.png" alt="" class="hero-img">
+    <div class="social-links">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
+  </div>
+  <script type="text/javascript">
+    function validation() {
+      var form = document.getElementById('form')
+      var email = document.getElementById('email').value;
+      var border = document.getElementById('email')
+      var text = document.getElementById('text')
+      var pattern = /^ [A - Z0 -9._ % +-] +@[A - Z0 - 9. -]+\.[A - Z]{ 2, 4 } $/
 
-  We are launching soon!
+      if (email.match(pattern)) {
+        border.style.border = '1px solid red'
+        text.innerHTML = 'Your Email Address is valid'
+        text.style.color = '#333'
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+      } else {
+        text.innerHTML = 'Please provide a valid email address'
+        text.style.color = '#FF5263'
+        border.style.border = '1px solid red'
+      }
+    }
+  </script>
 </body>
+
 </html>

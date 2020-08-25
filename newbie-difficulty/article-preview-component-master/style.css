@@ -19,7 +19,6 @@ body {
 
 .article-preview h2 {
     color: hsl(217, 19%, 35%);
-    font-weight: 700;
 }
 
 .article-preview p {
@@ -110,9 +109,14 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         max-width: 80%;
+        line-height: 1.5;
+        /* font-size: 1px; */
     }
     h1 {
         font-size: 1.4rem;
+    }
+    p {
+        line-height: 1.8;
     }
     .article-preview > img {
         height: 250px;

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root {
+  --main-pink: hsl(322, 100%, 66%);
+  --pale-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+.header {
+  background-image: url(/images/bg-hero-desktop.svg);
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+    align-items: center;
+    button {
+      border: none;
+      box-shadow: 0 3px 6px rgba(138, 138, 138, 0.16),
+        0 3px 6px rgba(165, 165, 165, 0.23);
+      border-radius: 20px;
+      padding: 0.7rem 3rem;
+      background-color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  .hero-header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    .hero-description {
+      align-self: center;
+      flex: 70%;
+      margin-right: 2rem;
+      p {
+        margin: 1rem 0;
+      }
+      button {
+        background-color: var(--main-pink);
+        border: none;
+        border-radius: 20px;
+        color: white;
+        font-weight: 600;
+        padding: 0.7rem 3rem;
+        box-shadow: 0 3px 6px rgba(138, 138, 138, 0.16),
+          0 3px 6px rgba(165, 165, 165, 0.23);
+      }
+    }
+  }
+}
+
+.main-section {
+  width: 80%;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  img {
+    width: 100%;
+  }
+}
+
+.cta-container {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  transform: translateY(2rem);
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  background-color: var(--dark-cyan);
+  padding: 5rem;
+  color: white;
+}

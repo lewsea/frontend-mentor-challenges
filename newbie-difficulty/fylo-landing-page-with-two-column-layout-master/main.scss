@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --darkBlue: hsl(243, 87%, 12%);
+  --desaturatedBlue: hsl(238, 22%, 44%);
+  --brightBlue: hsl(224, 93%, 58%);
+  --moderateCyan: hsl(170, 45%, 43%);
+  --grayishBlue: hsl(240, 75%, 98%);
+  --lightGray: hsl(0, 0%, 75%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  color: var(--darkBlue);
+  background-color: var(--grayishBlue);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.nav {
+  ul {
+    display: flex;
+    list-style: none;
+    a {
+      margin-right: 2rem;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  margin-top: 4rem;
+  font-size: 1.3rem;
+}
+
+.section-description {
+  flex: 1;
+  p {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  .section-email {
+    input[type='email'] {
+      padding: 0.7rem 1rem;
+      width: 50%;
+      border: 1px solid hsl(0, 0%, 75%);
+      border-radius: 4px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    button {
+      border: none;
+      background-color: var(--brightBlue);
+      color: white;
+      padding: 0.7rem 3rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.section-img {
+  flex: 1;
+}
+
+.section-img img {
+  width: 100%;
+}
+
+.container-action {
+  background-color: var(--desaturatedBlue);
+  color: white;
+  padding: 3rem 0;
+}
+
+.call-to-action {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.cta-text {
+  flex: 2;
+}
+
+.call-to-action p {
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.767);
+  width: 80%;
+}
+
+.cta-field {
+  flex: 1;
+}
+
+.cta-field input {
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 75%);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cta-field button {
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--brightBlue);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--darkBlue);
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  img {
+  }
+  li {
+    list-style: none;
+  }
+  .footer {
+    display: flex;
+  }
+}
