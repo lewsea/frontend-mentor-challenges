@@ -59,13 +59,20 @@ body {
     margin: 1rem 0;
     font-size: 1rem;
   }
+  .description-link,
+  a {
+    color: var(--moderateCyan);
+    text-decoration: underline var(--moderateCyan);
+  }
   .section-email {
+    display: flex;
     input[type='email'] {
       padding: 0.7rem 1rem;
-      width: 50%;
       border: 1px solid hsl(0, 0%, 75%);
       border-radius: 4px;
       color: rgba(0, 0, 0, 0.5);
+      width: 50%;
+      margin-right: 1rem;
     }
     button {
       border: none;
@@ -144,5 +151,18 @@ footer {
   }
   .footer {
     display: flex;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    flex-direction: column-reverse;
+  }
+  .section-email {
+    display: flex;
+    flex-direction: column;
+    input[type='email'] {
+      width: 100% !important;
+    }
   }
 }
